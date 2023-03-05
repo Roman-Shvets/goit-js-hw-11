@@ -7,7 +7,7 @@ const fetchSearchBtn = document.querySelector("#search-form");
 const loadMoreBtn = document.querySelector(".load-more");
 const cardList = document.querySelector(".gallery");
 
-const baseUrl = "https://pixabay.com/api";
+const baseUrl = "https://pixabay.com/api/";
 const API_KEY = "34100220-38e5a3f6c25c883f1441c4bda"; 
 
 let lightbox = new SimpleLightbox('.gallery a');
