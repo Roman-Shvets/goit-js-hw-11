@@ -7,6 +7,9 @@ const fetchSearchBtn = document.querySelector("#search-form");
 const loadMoreBtn = document.querySelector(".load-more");
 const cardList = document.querySelector(".gallery");
 
+const baseUrl = "https://pixabay.com/api";
+const API_KEY = "34100220-38e5a3f6c25c883f1441c4bda"; 
+
 let lightbox = new SimpleLightbox('.gallery a');
 let page;
 let searchObject;
@@ -63,8 +66,8 @@ loadMoreBtn.addEventListener("click", async (event) => {
 });
 
 async function fetchSearch(toSearch, toPage) {
- const baseUrl = `https://pixabay.com/api?key=34100220-38e5a3f6c25c883f1441c4bda&q=${toSearch}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${toPage}`;
- const response = await axios.get(baseUrl);
+ const URL = `${baseUrl}?key=${API_KEY}&q=${toSearch}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${toPage}`;
+ const response = await axios.get(URL);
 return response;
 };
 
